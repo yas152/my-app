@@ -17,4 +17,17 @@ pipeline {
             }
         }
     }
+     post {
+       
+        success {
+            echo 'I succeeeded!'
+             rocketSend "--------rocketchat buies GOOD------------" 
+        }
+     
+        failure {
+            echo 'I failed :('
+             rocketSend "-------rocketchat buies BED----------"
+            }
+        }
+
 }
